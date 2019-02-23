@@ -1,0 +1,25 @@
+{
+  "name": "hackillinois-front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goelp14/Hackillinois-Front-End.git"
+  },
+  "author": "Pranav Goel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goelp14/Hackillinois-Front-End/issues"
+  },
+  "homepage": "https://github.com/goelp14/Hackillinois-Front-End#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "4.16.4",
+    "request": "^2.88.0"
+  }
+}
