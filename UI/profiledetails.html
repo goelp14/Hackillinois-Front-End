@@ -172,10 +172,14 @@
                     <label for="author">City of Departure <span class="required">*</span></label>
                     <input type="text" name="author" value="" size="30" required="required">
                   </p>
-                  <p class="comment-form-email">
-                    <label for="email"> <span class="required">*</span></label>
-                    <input type="email" name="email" value="" aria-required="true" required="required">
+                  <p class="comment-form-dates">
+                    <label for="start"> <span class="required">*</span></label>
+                    <input type="date" id = "start" name="trip-start" value="2018-08-22"   min="2018-01-01" max="2018-12-31" required="required">
                   </p>
+                  <p class="comment-form-dates">
+                        <label for="end"> </label>
+                        <input type="date" id = "end" name="trip-end" value="2018-08-22"   min="2018-01-01" max="2018-12-31" required="required">
+                      </p>
                   <p class="comment-form-min">
                     <label for="min">Minimum Price</label>
                     <input type="text" name="min">  
@@ -183,11 +187,7 @@
                   <p class="comment-form-max">
                         <label for="max">Maximum Price</label>
                         <input type="text" name="max">  
-                      </p>
-                  <p class="comment-form-travelers">
-                    <label for="travelers">Number of Travelers (Please Enter an Integer)</label>
-                    <input type="text" name="travelers">
-                  </p>                
+                      </p>              
                   <p class="form-submit">
                     <input type="submit" name="submit" class="aa-browse-btn" value="Send Message">
                   </p>        
