@@ -170,7 +170,7 @@
                 <form class="contactform">                  
                   <p class="comment-form-author">
                     <label for="author">City of Departure <span class="required">*</span></label>
-                    <input type="text" name="author" value="" size="30" required="required">
+                    <input type="text" name="author" value="" size="30" required="required" id = "location">
                   </p>
                   <p class="comment-form-dates">
                     <label for="start"> <span class="required">*</span></label>
@@ -182,24 +182,26 @@
                       </p>
                       <p class="comment-form-children">
                             <label for="min">Number of Children (Ages 0-17)</label>
-                            <input type="number" min = "0" max = "5" name="children" step = "1"> 
+                            <input type="number" min = "0" max = "5" name="children" step = "1" id = "children"> 
                       </p>
                       <p class="comment-form-adults">
                             <label for="adults">Number of Adults (Ages 18-64)</label>
-                            <input type="number" min = "0" max = "5" name="adult" step = "1"> 
+                            <input type="number" min = "0" max = "5" name="adult" step = "1" id = "Adults"> 
                       </p>
                       <p class="comment-form-seniors">
                             <label for="seniors">Number of Seniors (Ages 65+)</label>
-                            <input type="number" min = "0" max = "5" name="seniors" step = "1"> 
+                            <input type="number" min = "0" max = "5" name="seniors" step = "1" id = "Seniors"> 
                       </p>
                   <p class="comment-form-max">
                         <label for="max">Maximum</label>
-                        <input type="number" min = "0" name="max" step = ".01">  
+                        <input type="number" min = "0" name="max" step = ".01" id = "maxVal">  
                       </p>              
                   <p class="form-submit">
                     <input type="submit" name="submit" class="aa-browse-btn" value="submit">
                   </p>        
                 </form>
+
+
               </div>
             </div>
           </div>

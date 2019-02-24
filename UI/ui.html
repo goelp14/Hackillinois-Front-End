@@ -1,0 +1,19 @@
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+<script>
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://secret-ravine-69424.herokuapp.com/inspiration?city=madrid&maxPrice=500",
+  "method": "GET",
+  "headers": {
+    "cache-control": "no-cache",
+    "Postman-Token": "8d01bb3c-65b5-4a53-8c78-abbb4614e310"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+</script>
