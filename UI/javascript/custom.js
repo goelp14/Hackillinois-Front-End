@@ -419,8 +419,11 @@ jQuery(function($){
         console.log(response);
         if (!response.data) {
           alert(response.errors && response.errors[0] && response.errors[0].detail);
-        } else {
+        } else if (type === "Inspiration") {
+          document.location.href = `http://trave.surge.sh/feelinglucky.html#${encodeURIComponent(JSON.stringify(response))}`
+        } else{
           document.location.href = `http://trave.surge.sh/flightlist.html#${encodeURIComponent(JSON.stringify(response))}`
+
         }
        });
       console.log(curlocation);
@@ -431,8 +434,11 @@ jQuery(function($){
     jQuery(".aa-properties-nav li").each((i, el) => {
       const e = jQuery(el);
       const data = hashData.data[i];
+      e.find(".fromLucky").html(data.origin);
+      e.find(".toLucky").html(data.destination);
       e.find(".fromList").html(data.origin);
       e.find(".toList").html(data.destination);
+      e.find(".flti").html(data.id);
     })
  
 });
