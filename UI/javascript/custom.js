@@ -352,21 +352,48 @@ jQuery(function($){
 
     jQuery(".contactform").submit(e => {
       e.preventDefault();
-      const type = "inspiration";
-      const location = jQuery("form #location").val();
-      const numberOfPeople = 1;
-      if (numberOfPeople > 1 && type === "inspiration") {
-        alert("wrong")
-        return;
+      const type = jQuery("form #typeTravel").val();
+      console.log(type);
+      const curlocation = jQuery("form #locationCurr").val();
+      const destlocation = jQuery("form #locationDest").val();
+      const startDate = jQuery("form #start").val();
+      const endDate = jQuery("form #end").val();
+      const kids = 0;
+      const adults = 0;
+      const seniors = 0;
+      const price =  jQuery("form #maxVal").val();
+      if (jQuery("form #children") > 0){
+        kids = kids + jQuery("form #children");
+      } else if (jQuery("form #Adults") > 0){
+        adults = adults + jQuery("form #Adults");
+      } else if(jQuery("form #Seniors") > 0){
+        seniors = seniors + jQuery("form #Seniors")
       }
-      const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": `https://secret-ravine-69424.herokuapp.com/inspiration?city=${location}&maxPrice=500`,
-        "method": "GET",
-        "headers": {
-          "cache-control": "no-cache",
-          "Postman-Token": "8d01bb3c-65b5-4a53-8c78-abbb4614e310"
+      const numberOfPeople = kids + adults + seniors;
+      if (numberOfPeople > 1 && type === "inspiration" || numberOfPeople <= 0) {
+        alert("Sorry, the inspiration feature is not available for more than one person!")
+        return;
+      } else if (numberOfPeople === 1 && type === "inspiration"){
+        const settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": `https://secret-ravine-69424.herokuapp.com/inspiration?city=${curlocation}&maxPrice=${price}`,
+          "method": "GET",
+          "headers": {
+            "cache-control": "no-cache",
+            "Postman-Token": "8d01bb3c-65b5-4a53-8c78-abbb4614e310"
+          } 
+        }
+      } else if (type === "Standard"){ 
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": `"https://secret-ravine-69424.herokuapp.com/lowfare?city1=${curlocation}&city2=${destlocation}&departDate=${startDate}&returnDate=${endDate}&maxPrice=${price}&adults=${adults}&children=${children}&seniors=${seniors}"`,
+          "method": "GET",
+          "headers": {
+            "cache-control": "no-cache",
+            "Postman-Token": "97f46f72-f8a8-4c10-8b53-66998f05c431"
+          }
         }
       }
       

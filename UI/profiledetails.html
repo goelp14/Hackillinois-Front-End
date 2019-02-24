@@ -169,21 +169,25 @@
               <div class="aa-contact-form">
                 <form class="contactform">
                   <p class="comment-type-author">
-                    <select>
+                    <select id = "typeTravel">
                       <option>Inspiration</option>
                       <option>Standard</option>
                     </select>
-                  </p>                  
+                  </p> 
                   <p class="comment-form-author">
-                    <label for="author">City of Departure <span class="required">*</span></label>
-                    <input type="text" name="author" value="" size="30" required="required" id = "location">
+                      <label for="author">Current City<span class="required">*</span></label>
+                      <input type="text" name="author" value="" size="30" required="required" id = "locationCurr">
+                  </p>                 
+                  <p class="comment-form-author">
+                    <label for="author">Destination City</label>
+                    <input type="text" name="author" value="" size="30" id = "locationDest">
                   </p>
                   <p class="comment-form-dates">
-                    <label for="start"> <span class="required">*</span></label>
+                    <label for="start">Start Date<span class="required">*</span></label>
                     <input type="date" id = "start" name="trip-start" value="2019-02-24"   min="2019-01-01" max="2019-12-31" required="required">
                   </p>
                   <p class="comment-form-dates">
-                        <label for="end"> </label>
+                        <label for="end">End Date</label>
                         <input type="date" id = "end" name="trip-end" value="2019-02-24"   min="2019-01-01" max="2019-12-31" required="required">
                       </p>
                       <p class="comment-form-children">
