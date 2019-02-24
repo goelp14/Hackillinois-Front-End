@@ -135,10 +135,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="aa-property-header-inner">
-            <h2>Contact</h2>
+            <h2>Your Banking Profile</h2>
             <ol class="breadcrumb">
-            <li><a href="#">HOME</a></li>            
-            <li class="active">Contact</li>
           </ol>
           </div>
         </div>
@@ -154,15 +152,53 @@
           <div class="aa-contact-area">
             <div class="aa-contact-top">
               <div class="aa-contact-top-left">
-                <iframe width="100%" height="450" frameborder="0" allowfullscreen="" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6851.201919469417!2d-86.11773906635584!3d33.47324776828677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888bdb60cc49c571%3A0x40451ca6baf275c7!2s36008+AL-77%2C+Talladega%2C+AL+35160%2C+USA!5e0!3m2!1sbn!2sbd!4v1460452919256"></iframe>
+                <div class="jumbotron" width: "100">
+                    <h1 class="display-4">Select Your Criteria</h1>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Single or Group?
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <button class="dropdown-item" type="button">Single</button>
+                          <button class="dropdown-item" type="button">Group</button>
+                        </div>
+                      </div>
+                    <hr class="my-4">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Domestic or International?
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <button class="dropdown-item" type="button">Domestic</button>
+                          <button class="dropdown-item" type="button">International</button>
+                        </div>
+                      </div>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Min and Max Price</span>
+                        </div>
+                        <input type="text" aria-label="Min price" class="form-control">
+                        <input type="text" aria-label="Max price" class="form-control">
+                      </div>
+                      <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Departure City</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Departure City" aria-describedby="inputGroup-sizing-sm">
+                      </div>
+                      <input type="text" id="demo">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Find trips</a>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">I'm feeling lucky</a>
+                  </div>
               </div>
               <div class="aa-contact-top-right">
-                <h2>Contact</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae placeat aspernatur aperiam, quisquam voluptas enim tempore ab itaque nam modi eos corrupti distinctio nobis labore dolorum quae tenetur. Sapiente, sequi.</p>
+                <h2>Your Banking Info</h2>
+                <p>Your bank info is currently as follows. Current balances will taken into account when evaluating the chosen price ranges.</p>
                 <ul class="contact-info-list">
-                  <li> <i class="fa fa-phone"></i> 1-700-564-6321</li>
-                  <li> <i class="fa fa-envelope-o"></i> info@homeproperty.com</li>
-                  <li> <i class="fa fa-map-marker"></i> 36008 AL-77, Talladega, AL 35160, USA</li>
+                  <li> <i class="fa fa-phone"></i> 1-800-564-6321</li>
+                  <li> <i class="fa fa-envelope-o"></i> genericbank.com</li>
+                  <p>Checking Account:</p>
+                  <p>Savings Account:</p>
                 </ul>
               </div>
             </div>
@@ -255,6 +291,9 @@
   <script type="text/javascript" src="./javascript/jquery.fancybox.pack.js"></script>
   <!-- Custom js -->
   <script src="./javascript/custom.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+  <script src="lightpick.js"></script>
+
 
   </body>
 </html>
