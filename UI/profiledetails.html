@@ -180,16 +180,24 @@
                         <label for="end"> </label>
                         <input type="date" id = "end" name="trip-end" value="2019-02-24"   min="2019-01-01" max="2019-12-31" required="required">
                       </p>
-                  <p class="comment-form-min">
-                    <label for="min">Minimum Price</label>
-                    <input type="number" min = "0" name="min" step = ".01">  
-                  </p>
+                      <p class="comment-form-children">
+                            <label for="min">Number of Children (Ages 0-17)</label>
+                            <input type="number" min = "0" max = "17" name="children" step = "1"> 
+                      </p>
+                      <p class="comment-form-adults">
+                            <label for="adults">Number of Adults (Ages 18-64)</label>
+                            <input type="number" min = "18" max = "64" name="adult" step = "1"> 
+                      </p>
+                      <p class="comment-form-seniors">
+                            <label for="seniors">Number of Seniors (Ages 65+)</label>
+                            <input type="number" min = "65" max = "150" name="seniors" step = "1"> 
+                      </p>
                   <p class="comment-form-max">
                         <label for="max">Maximum Price</label>
                         <input type="number" min = "0" name="max" step = ".01">  
                       </p>              
-                  <p class="form-submit">
-                    <input type="submit" name="submit" class="aa-browse-btn" value="Send Message">
+                  <p class="form-search">
+                    <input type="search" name="search" class="aa-browse-btn" value="Search">
                   </p>        
                 </form>
               </div>
