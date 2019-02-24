@@ -162,21 +162,23 @@
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
         <script>
-            var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://secret-ravine-69424.herokuapp.com/pay?amount=100&name=Teddy%20Chen&recipient=teddychen1251%40gmail.com&description=desc",
-            "method": "GET",
-            "headers": {
-                "cache-control": "no-cache",
-                "Postman-Token": "8ca3cb4c-f5b2-4071-a375-71dbffee59c0"
-            }
-            }
+            function pay(){
+                var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://secret-ravine-69424.herokuapp.com/pay?amount=100&name=Teddy%20Chen&recipient=teddychen1251%40gmail.com&description=desc",
+                "method": "GET",
+                "headers": {
+                    "cache-control": "no-cache",
+                    "Postman-Token": "8ca3cb4c-f5b2-4071-a375-71dbffee59c0"
+                }
+                }
 
-            $.ajax(settings).done(function (response) {
-            console.log(response);
-            });
-            window.location.href = "./confirmationpage.html";
+                $.ajax(settings).done(function (response) {
+                console.log(response);
+                });
+                window.location.href = "./confirmationpage.html";
+            }
         </script>
     <div id="overlay2" title="Click to turn off the overlay effect" onclick="off()" style="display: none;">
         <p id = "text"></p>
