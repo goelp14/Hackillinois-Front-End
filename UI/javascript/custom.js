@@ -365,50 +365,6 @@ jQuery(function($){
       console.log(jQuery("form #children").val());
       console.log(jQuery("form #Adults").val());
       console.log(jQuery("form #Seniors").val());
-<<<<<<< HEAD
-      $("#Adults").attr("value", 1);
-      if (jQuery("form #children").val() > 0){
-        kids = jQuery("form #children").val();
-        console.log(kids);
-      }
-      
-      if (jQuery("form #Adults").val() > 0){
-        adults = jQuery("form #Adults").val();
-        console.log(adults);
-      }
-      
-      if(jQuery("form #Seniors").val() > 0){
-        seniors = jQuery("form #Seniors").val();
-        console.log(seniors);
-      }
-      const numberOfPeople = parseInt(kids) + parseInt(adults) + parseInt(seniors);
-      console.log("this is " + numberOfPeople);
-      let settings = {}
-      if (numberOfPeople > 1 && type === "inspiration" || numberOfPeople <= 0) {
-        console.log(type);
-        alert("Sorry, the inspiration feature must have only one person!")
-        return;
-      } else if (numberOfPeople == 1 && type === "Inspiration"){
-        settings = {
-          "async": true,
-          "crossDomain": true,
-          "url": `https://secret-ravine-69424.herokuapp.com/inspiration?city=${curlocation}&maxPrice=${price}`,
-          "method": "GET",
-          "headers": {
-            "cache-control": "no-cache",
-            "Postman-Token": "8d01bb3c-65b5-4a53-8c78-abbb4614e310"
-          } 
-        }
-      } else if (type === "Standard" && destlocation){ 
-        settings = {
-          "async": true,
-          "crossDomain": true,
-          "url": `"https://secret-ravine-69424.herokuapp.com/lowfare?city1=${curlocation}&city2=${destlocation}&departDate=${startDate}&returnDate=${endDate}&maxPrice=${price}&adults=${adults}&children=${kids}&seniors=${seniors}"`,
-          "method": "GET",
-          "headers": {
-            "cache-control": "no-cache",
-            "Postman-Token": "97f46f72-f8a8-4c10-8b53-66998f05c431"
-=======
         if (jQuery("form #children").val() > 0){
           kids = jQuery("form #children").val();
           console.log(kids);
@@ -454,7 +410,6 @@ jQuery(function($){
               "cache-control": "no-cache",
               "Postman-Token": "97f46f72-f8a8-4c10-8b53-66998f05c431"
             }
->>>>>>> 540ea0783bb1dab31485363f41c99af138a2bda6
           }
         }else{
           alert("Sorry We do not support this feature yet.");

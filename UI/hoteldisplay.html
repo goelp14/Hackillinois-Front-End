@@ -154,30 +154,6 @@
                   background-color: rgb(220,220,220);
                 }
     </style>
-    <div id="overlay1" title="Click to turn off the overlay effect" onclick="off()" style="display: none;">
-        <p id = "text"></p>
-        <button type="button" class="btn-lg btn-outline-dark recenter" onclick="pay()">Pay Now</button>
-    </div>
-    <div id="overlay2" title="Click to turn off the overlay effect" onclick="off()" style="display: none;">
-        <p id = "text"></p>
-        <button type="button" class="btn-lg btn-outline-dark recenter">Pay Now</button>
-    </div>
-    <div id="overlay3" title="Click to turn off the overlay effect" onclick="off()" style="display: none;">
-        <p id = "text"></p>
-        <button type="button" class="btn-lg btn-outline-dark recenter">Pay Now</button>
-    </div>
-    <div id="overlay4" title="Click to turn off the overlay effect" onclick="off()" style="display: none;">
-            <p id = "text"></p>
-            <button type="button" class="btn-lg btn-outline-dark recenter">Pay Now</button>
-    </div>
-    <div id="overlay5" title="Click to turn off the overlay effect" onclick="off()" style="display: none;">
-            <p id = "text"></p>
-            <button type="button" class="btn-lg btn-outline-dark recenter">Pay Now</button>
-    </div>
-    <div id="overlay6" title="Click to turn off the overlay effect" onclick="off()" style="display: none;">
-            <p id = "text"></p>
-            <button type="button" class="btn-lg btn-outline-dark recenter">Pay Now</button>
-    </div>
     <div class="container">
       <div class="row">
         <div class="col-md-8">
@@ -214,37 +190,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" onclick="on()">Make Reservation</a>
-                        <script src="https://code.jquery.com/jquery-3.3.1.js"
-                        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-                        crossorigin="anonymous"></script>
-                        <script>
-                                function on() {
-                                    document.getElementById("overlay1").style.display = "block";
-                                }
-                                
-                                function off() {
-                                    document.getElementById("overlay1").style.display = "none";
-                                }
-                                function pay() {
-                                    var settings = {
-                                    "async": true,
-                                    "crossDomain": true,
-                                    "url": "https://secret-ravine-69424.herokuapp.com/pay?amount=100&name=Teddy%20Chen&recipient=teddychen1251%40gmail.com&description=desc",
-                                    "method": "GET",
-                                    "headers": {
-                                        "cache-control": "no-cache",
-                                        "Postman-Token": "8ca3cb4c-f5b2-4071-a375-71dbffee59c0"
-                                    }
-                                    }
-
-                                    $.ajax(settings).done(function (response) {
-                                    console.log(response);
-                                    });
-                                    location.href = './confirmationpage.html'
-                                }
-                        </script>
-
+                        <a class="aa-secondary-btn" onclick="pay()">Make Reservation</a>
                       </div>
                     </div>
                   </article>
@@ -266,16 +212,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" onclick="on()">Make Reservation</a>
-                        <script>
-                                function on() {
-                                    document.getElementById("overlay2").style.display = "block";
-                                }
-                                
-                                function off() {
-                                    document.getElementById("overlay2").style.display = "none";
-                                }
-                        </script>
+                        <a class="aa-secondary-btn" onclick="pay()">Make Reservation</a>
                     </div>
                     </div>
                   </article>
@@ -297,16 +234,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" onclick="on()">Make Reservation</a>
-                        <script>
-                                function on() {
-                                    document.getElementById("overlay3").style.display = "block";
-                                }
-                                
-                                function off() {
-                                    document.getElementById("overlay3").style.display = "none";
-                                }
-                        </script>
+                        <a class="aa-secondary-btn" onclick="pay()">Make Reservation</a>
                     </div>
                     </div>
                   </article>
@@ -328,16 +256,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" onclick="on()">Make Reservation</a>
-                        <script>
-                                function on() {
-                                    document.getElementById("overlay4").style.display = "block";
-                                }
-                                
-                                function off() {
-                                    document.getElementById("overlay4").style.display = "none";
-                                }
-                        </script>
+                        <a class="aa-secondary-btn" onclick="pay()">Make Reservation</a>
                     </div>
                     </div>
                   </article>
@@ -359,16 +278,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" onclick="on()">Make Reservation</a>
-                        <script>
-                                function on() {
-                                    document.getElementById("overlay5").style.display = "block";
-                                }
-                                
-                                function off() {
-                                    document.getElementById("overlay5").style.display = "none";
-                                }
-                        </script>
+                        <a class="aa-secondary-btn" onclick="pay()">Make Reservation</a>
                     </div>
                     </div>
                   </article>
@@ -390,17 +300,31 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" onclick="on()">Make Reservation</a>
+                        <a class="aa-secondary-btn" onclick="pay()">Make Reservation</a>
+                    </div>
+                    <a class="aa-secondary-btn" onclick="pay()">Make Reservation</a>
+                        <script src="https://code.jquery.com/jquery-3.3.1.js"
+                        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                        crossorigin="anonymous"></script>
                         <script>
-                                function on() {
-                                    document.getElementById("overlay6").style.display = "block";
-                                }
-                                
-                                function off() {
-                                    document.getElementById("overlay6").style.display = "none";
+                                function pay() {
+                                    var settings = {
+                                    "async": true,
+                                    "crossDomain": true,
+                                    "url": "https://secret-ravine-69424.herokuapp.com/pay?amount=100&name=Teddy%20Chen&recipient=teddychen1251%40gmail.com&description=desc",
+                                    "method": "GET",
+                                    "headers": {
+                                        "cache-control": "no-cache",
+                                        "Postman-Token": "8ca3cb4c-f5b2-4071-a375-71dbffee59c0"
+                                    }
+                                    }
+
+                                    $.ajax(settings).done(function (response) {
+                                    console.log(response);
+                                    });
+                                    location.href = './confirmationpage.html'
                                 }
                         </script>
-                    </div>
                     </div>
                   </article>
                 </li>
