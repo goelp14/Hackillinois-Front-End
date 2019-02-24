@@ -2487,7 +2487,7 @@ img {
   width: 100%;
 }
 #aa-signin:before {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.16);
   content: '';
   position: fixed;
   left: 0;
@@ -2603,7 +2603,7 @@ img {
   color: #000;
 }
 #aa-signin .aa-signin-area .aa-signin-form .aa-single-submit p a {
-  color: #fff;
+  color: #197BBD;
   font-weight: bold;
 }
 
