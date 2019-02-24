@@ -365,6 +365,7 @@ jQuery(function($){
       console.log(jQuery("form #children").val());
       console.log(jQuery("form #Adults").val());
       console.log(jQuery("form #Seniors").val());
+      $("#Adults").attr("value", 1);
       if (jQuery("form #children").val() > 0){
         kids = jQuery("form #children").val();
         console.log(kids);
@@ -381,12 +382,13 @@ jQuery(function($){
       }
       const numberOfPeople = parseInt(kids) + parseInt(adults) + parseInt(seniors);
       console.log("this is " + numberOfPeople);
+      let settings = {}
       if (numberOfPeople > 1 && type === "inspiration" || numberOfPeople <= 0) {
         console.log(type);
-        alert("Sorry, the inspiration feature is not available for more than one person!")
+        alert("Sorry, the inspiration feature must have only one person!")
         return;
-      } else if (numberOfPeople == 1 && type === "inspiration"){
-        const settings = {
+      } else if (numberOfPeople == 1 && type === "Inspiration"){
+        settings = {
           "async": true,
           "crossDomain": true,
           "url": `https://secret-ravine-69424.herokuapp.com/inspiration?city=${curlocation}&maxPrice=${price}`,
@@ -397,7 +399,7 @@ jQuery(function($){
           } 
         }
       } else if (type === "Standard" && destlocation){ 
-        var settings = {
+        settings = {
           "async": true,
           "crossDomain": true,
           "url": `"https://secret-ravine-69424.herokuapp.com/lowfare?city1=${curlocation}&city2=${destlocation}&departDate=${startDate}&returnDate=${endDate}&maxPrice=${price}&adults=${adults}&children=${kids}&seniors=${seniors}"`,
