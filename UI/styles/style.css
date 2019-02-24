@@ -2167,12 +2167,12 @@ img {
   width: 60%;
 }
 #aa-contact .aa-contact-area .aa-contact-top .aa-contact-top-right {
-  background-color: #555;
+  background-color: rgb(85, 85, 85);
   display: inline;
   float: left;
-  height: 450px;
+  height: 300px;
   padding: 50px 30px;
-  width: 40%;
+  width: 100%;
 }
 #aa-contact .aa-contact-area .aa-contact-top .aa-contact-top-right h2 {
   color: #fff;
