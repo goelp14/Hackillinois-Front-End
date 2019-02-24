@@ -350,6 +350,45 @@ jQuery(function($){
       ]
     }); 
 
+    jQuery(".contactform").submit(e => {
+      e.preventDefault();
+      const type = "inspiration";
+      const location = jQuery("form #location").val();
+      const numberOfPeople = 1;
+      if (numberOfPeople > 1 && type === "inspiration") {
+        alert("wrong")
+        return;
+      }
+      const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": `https://secret-ravine-69424.herokuapp.com/inspiration?city=${location}&maxPrice=500`,
+        "method": "GET",
+        "headers": {
+          "cache-control": "no-cache",
+          "Postman-Token": "8d01bb3c-65b5-4a53-8c78-abbb4614e310"
+        }
+      }
+      
+      jQuery.ajax(settings).done(response => {
+        console.log(response);
+        if (!response.data) {
+          alert(response.errors && response.errors[0] && response.errors[0].detail);
+        } else {
+          document.location.href = `http://trave.surge.sh/flightlist.html#${encodeURIComponent(JSON.stringify(response))}`
+        }
+      });
+      console.log(location);
+    })
+
+
+    const hashData = document.location.hash && JSON.parse(decodeURIComponent(document.location.hash.slice(1)));
+    jQuery(".aa-properties-nav li").each((i, el) => {
+      const e = jQuery(el);
+      const data = hashData.data[i];
+      e.find(".fromList").html(data.origin);
+      e.find(".toList").html(data.destination);
+    })
  
 });
 
