@@ -363,14 +363,20 @@ jQuery(function($){
       const seniors = 0;
       const price =  jQuery("form #maxVal").val();
       if (jQuery("form #children") > 0){
-        kids = kids + jQuery("form #children");
-      } else if (jQuery("form #Adults") > 0){
-        adults = adults + jQuery("form #Adults");
-      } else if(jQuery("form #Seniors") > 0){
-        seniors = seniors + jQuery("form #Seniors")
+        kids = jQuery("form #children");
+      }
+      
+      if (jQuery("form #Adults") > 0){
+        adults = jQuery("form #Adults");
+      }
+      
+      if(jQuery("form #Seniors") > 0){
+        seniors = jQuery("form #Seniors");
       }
       const numberOfPeople = kids + adults + seniors;
+      console.log(numberOfPeople);
       if (numberOfPeople > 1 && type === "inspiration" || numberOfPeople <= 0) {
+        console.log(type);
         alert("Sorry, the inspiration feature is not available for more than one person!")
         return;
       } else if (numberOfPeople === 1 && type === "inspiration"){
