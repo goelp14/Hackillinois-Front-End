@@ -162,27 +162,31 @@
             </div>
             <div class="aa-contact-bottom">
               <div class="aa-title">
-                <h2>Send Your Message</h2>
+                <h2>Customize Your Trip</h2>
                 <span></span>
-                <p>Your email address will not be published. Required fields are marked <strong class="required">*</strong></p>
+                <p>Required fields are marked <strong class="required">*</strong></p>
               </div>
               <div class="aa-contact-form">
                 <form class="contactform">                  
                   <p class="comment-form-author">
-                    <label for="author">Name <span class="required">*</span></label>
+                    <label for="author">City of Departure <span class="required">*</span></label>
                     <input type="text" name="author" value="" size="30" required="required">
                   </p>
                   <p class="comment-form-email">
-                    <label for="email">Email <span class="required">*</span></label>
+                    <label for="email"> <span class="required">*</span></label>
                     <input type="email" name="email" value="" aria-required="true" required="required">
                   </p>
-                  <p class="comment-form-url">
-                    <label for="subject">Subject</label>
-                    <input type="text" name="subject">  
+                  <p class="comment-form-min">
+                    <label for="min">Minimum Price</label>
+                    <input type="text" name="min">  
                   </p>
-                  <p class="comment-form-comment">
-                    <label for="comment">Message</label>
-                    <textarea name="comment" cols="45" rows="8" aria-required="true" required="required"></textarea>
+                  <p class="comment-form-max">
+                        <label for="max">Maximum Price</label>
+                        <input type="text" name="max">  
+                      </p>
+                  <p class="comment-form-travelers">
+                    <label for="travelers">Number of Travelers (Please Enter an Integer)</label>
+                    <input type="text" name="travelers">
                   </p>                
                   <p class="form-submit">
                     <input type="submit" name="submit" class="aa-browse-btn" value="Send Message">
