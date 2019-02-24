@@ -358,20 +358,26 @@ jQuery(function($){
       const destlocation = jQuery("form #locationDest").val();
       const startDate = jQuery("form #start").val();
       const endDate = jQuery("form #end").val();
-      const kids = 0;
-      const adults = 0;
-      const seniors = 0;
+      let kids = 0;
+      let adults = 0;
+      let seniors = 0;
       const price =  jQuery("form #maxVal").val();
-      if (jQuery("form #children") > 0){
-        kids = jQuery("form #children");
+      console.log(jQuery("form #children").val());
+      console.log(jQuery("form #Adults").val());
+      console.log(jQuery("form #Seniors").val());
+      if (jQuery("form #children").val() > 0){
+        kids = jQuery("form #children").val();
+        console.log(kids);
       }
       
-      if (jQuery("form #Adults") > 0){
-        adults = jQuery("form #Adults");
+      if (jQuery("form #Adults").val() > 0){
+        adults = jQuery("form #Adults").val();
+        console.log(adults);
       }
       
-      if(jQuery("form #Seniors") > 0){
-        seniors = jQuery("form #Seniors");
+      if(jQuery("form #Seniors").val() > 0){
+        seniors = jQuery("form #Seniors").val();
+        console.log(seniors);
       }
       const numberOfPeople = kids + adults + seniors;
       console.log(numberOfPeople);
@@ -390,7 +396,7 @@ jQuery(function($){
             "Postman-Token": "8d01bb3c-65b5-4a53-8c78-abbb4614e310"
           } 
         }
-      } else if (type === "Standard"){ 
+      } else if (type === "Standard" && destlocation){ 
         var settings = {
           "async": true,
           "crossDomain": true,
@@ -401,6 +407,8 @@ jQuery(function($){
             "Postman-Token": "97f46f72-f8a8-4c10-8b53-66998f05c431"
           }
         }
+      }else{
+        alert("Sorry We do not support the current choices!");
       }
       
       jQuery.ajax(settings).done(response => {
