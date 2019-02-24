@@ -2193,6 +2193,7 @@ img {
 #aa-contact .aa-contact-area .aa-contact-top .aa-contact-top-right .contact-info-list li i {
   border: 1px solid #ccc;
   margin-right: 10px;
+  margin-left: 15px;
   padding: 5px;
   text-align: center;
   width: 35px;
@@ -2806,7 +2807,7 @@ img {
 
   #aa-contact .aa-contact-area .aa-contact-top .aa-contact-top-right {
     padding: 22px;
-    width: 45%;
+    width: 100%;
   }
 
   #aa-contact .aa-contact-area .aa-contact-top .aa-contact-top-right .contact-info-list li {
