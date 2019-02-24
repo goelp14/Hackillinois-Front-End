@@ -436,6 +436,8 @@ jQuery(function($){
       const data = hashData.data[i];
       e.find(".fromLucky").html(data.origin);
       e.find(".toLucky").html(data.destination);
+      e.find("aa-price").html(data.price[0])
+      e.find(".tito").html(data.id);
       e.find(".fromList").html(data.origin);
       e.find(".toList").html(data.destination);
       e.find(".flti").html(data.id);
