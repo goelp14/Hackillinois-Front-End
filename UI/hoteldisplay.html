@@ -13,7 +13,13 @@
     <!-- Font awesome -->
     <link href="./styles/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="./styles/bootstrap.css" rel="stylesheet">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <!--
+    <link href="./styles/bootstrap.css" rel="stylesheet"> 
+    -->  
     <!-- slick slider -->
     <link rel="stylesheet" type="text/css" href="./styles/slick.css">
     <!-- price picker slider -->
@@ -130,18 +136,27 @@
   <!-- Start Properties  -->
   <section id="aa-properties">
     <style>
-                #btnthing{
+                .recenter{
                   position: absolute;
                   top: 50%;
                   left: 50%;
                   transform: translate(-50%,-50%);
                   -ms-transform: translate(-50%,-50%);
+                  padding-left: 30px 50px  30px 50px;
+                }
+                #text{
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%,-50%);
+                  -ms-transform: translate(-50%,-50%);
+                  padding: 150px 350px 150px 350px;
+                  background-color: rgb(220,220,220);
                 }
     </style>
-    <div id="overlay" title="Click to turn off the overlay effect" style="display: none;">
-        <div onclick="off()"></div>
-        <button type="button" class="btn btn-outline-dark" id = 'btnthing'>Pay Now</button>
-        <div onclick="off()"></div>
+    <div id="overlay" title="Click to turn off the overlay effect" onclick="off()" style="display: none;">
+        <p id = "text"></p>
+        <button type="button" class="btn-lg btn-outline-dark recenter">Pay Now</button>
     </div>
     <div class="container">
       <div class="row">
